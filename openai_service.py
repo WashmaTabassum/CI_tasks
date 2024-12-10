@@ -10,7 +10,10 @@ def call_open_ai(messages):
     response = client.chat.completions.create(
         temperature=1,
         model="gpt-4o-mini",
-        messages= messages
+        messages=[
+            {"role":"system","content":"you are a chat bot answer questions based on the given data"},
+            {"role":"user","content": messages}
+        ]
     )
     # print(response)
     return response.choices[0].message.content

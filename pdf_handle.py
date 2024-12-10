@@ -3,17 +3,17 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from chromadb_service import load_chunks
 import logging
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(levelname)s - %(message)s',
-                    filename='pdf_handle.log'
-                    )
-logging.debug("This is a debug message")
-logging.info("This is an info message")
-logging.warning("This is a warning message")
-logging.error("This is an error message")
-logging.critical("This is a critical message")
+# logging.basicConfig(level=logging.DEBUG,
+#                     format='%(asctime)s - %(levelname)s - %(message)s',
+#                     filename='pdf_handle.log'
+#                     )
+# logging.debug("This is a debug message")
+# logging.info("This is an info message")
+# logging.warning("This is a warning message")
+# logging.error("This is an error message")
+# logging.critical("This is a critical message")
 
-loader = PyPDFLoader("./Lecture_1 - Introduction to Parallel and Distributed Computing.pdf")
+loader = PyPDFLoader("./Lecture 01 - Introduction to Parallel and Distributed Computing.pdf")
 docs = loader.load()
 
 # print(docs[0])
